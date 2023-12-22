@@ -75,6 +75,25 @@ def Largest_Value(X): #Return the Largest value in the list
 def Smallest_Value(X): #Return the Smallest value in the list
     return (min(X))
 
+def Lar_Val(X): #Return the Largest value in the list using a Loop
+    var = 0
+    for i in X:
+        if i > var:
+            var = i
+            
+    return (var)
+
+def Small_Val(X):#Return the Smallest value in the list using a Loop
+    var = 0
+    for i in X:
+        if i < var:
+            var = i
+            
+    return (var)
+
+
+
+
 
 if __name__ == "__main__":
     print('testing mulitplication')
@@ -112,4 +131,8 @@ if __name__ == "__main__":
     print(Largest_Value([1,2,3]))
     print('Test for Smallest Value')
     print(Smallest_Value([1,2,3]))
+    print('Largest Value with loop')
+    print(Lar_Val([1,2,3,7,3]))
+    print('Smallest value with Loop')
+    print(Small_Val([1,4,-3,9]))
     
