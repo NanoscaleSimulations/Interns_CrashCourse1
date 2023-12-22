@@ -21,6 +21,12 @@ def cos(x): #In degrees
 def sqrt(x):
     return np.sqrt(x)
 
+def BMI(weight, height):
+    return weight/height**2
+
+def speed(distance, time):
+    return distance/time
+
 if __name__ == "__main__":
     print('testing mulitplication')
     print(times(2,4))
@@ -38,3 +44,7 @@ if __name__ == "__main__":
     print(cos(45))
     print("Testing square root")
     print(sqrt(9))
+    print("test for BMI")
+    print(BMI(106, 1.76))
+    print("testing speed")
+    print(speed(200,4))
