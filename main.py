@@ -51,6 +51,30 @@ def Tan(x):
     #Find the value of the Tangent function
     return(math.tan(x))
 
+def Standard_Deviation(X): #Calculate the Standard Deviation
+    #Find the Mean
+    Sum = 0
+    for number1 in X:
+        Sum += number1
+    mean = Sum / len(X)
+    
+    #Find the Sum of the numerator
+    Sum2 = 0
+    for number2 in X:
+        Sum2 += (number2 - mean)**2
+        
+    #Calculate the St. Dev.
+    sd = (math.sqrt((1.0/(float(len(X))-1.0))*Sum2))
+    return(sd)
+
+
+def Largest_Value(X): #Return the Largest value in the list
+    return (max(X))
+
+
+def Smallest_Value(X): #Return the Smallest value in the list
+    return (min(X))
+
 
 if __name__ == "__main__":
     print('testing mulitplication')
@@ -81,4 +105,11 @@ if __name__ == "__main__":
     # Test of the Tangent Function
     print('Test of the Tangent Function')
     print(math.pi)
+    #Test St. Dev.
+    print('Test of the Standard Deviation')
+    print(Standard_Deviation([1,2,3,4,5]))
+    print('Test for Largest Value')
+    print(Largest_Value([1,2,3]))
+    print('Test for Smallest Value')
+    print(Smallest_Value([1,2,3]))
     
