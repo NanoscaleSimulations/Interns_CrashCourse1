@@ -1,7 +1,7 @@
 import math
 
 print('This is our main')
-
+import numpy as np
 def Subtract(x,y):
     return x-y
 
@@ -13,6 +13,21 @@ def add(x,y):
 
 def times(x,y):
     return x*y
+
+def exponential(a,b):
+    return a**b
+
+def cos(x): #In degrees
+    return np.cos(x)
+
+def sqrt(x):
+    return np.sqrt(x)
+
+def BMI(weight, height):
+    return weight/height**2
+
+def speed(distance, time):
+    return distance/time
 
 def Quadratic(a,b,c):
     #The Formula will have the imput of (a*x^2)+(b*x)+c=0
@@ -48,7 +63,16 @@ if __name__ == "__main__":
     print('testing division')
     # Test of Divide
     print(Divide(10,2))
-    # Test of Quadratic Equation
+    print("Testing exponents")
+    print(exponential(3,2))
+    print("Testing the cosine function")
+    print(cos(45))
+    print("Testing square root")
+    print(sqrt(9))
+    print("test for BMI")
+    print(BMI(106, 1.76))
+    print("testing speed")
+    print(speed(200,4))    # Test of Quadratic Equation
     print('Test of Quadratic Equation')
     print(Quadratic(1,3,2))
     # Test of Sine Function
