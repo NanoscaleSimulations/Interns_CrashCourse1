@@ -11,7 +11,7 @@ def Divide(x,y):
 def add(x,y):
     return x+y
 
-def times(x,y):
+def multiply(x,y):
     return x*y
 
 def exponential(a,b):
@@ -51,10 +51,36 @@ def Tan(x):
     #Find the value of the Tangent function
     return(math.tan(x))
 
+def average(x):
+    sm = 0
+    for i in range(len(x)):
+        sm += x[i]
+    return sm/len(x)
 
+print(average([2,4,6,8]))
+
+def median(x):
+    x = sorted(x)
+    if (len(x) % 2) == 0: #If even, do this
+        lower = int((len(x)/2)-1)
+        upper = int(lower + 1)
+        print(f"lower is {x[lower]} and upper is {x[upper]}")
+        med = (x[lower] + x[upper])/2.0
+    else:
+        med = x[len(x)/2.0]
+    return med
+print(median([6,8,2,4])==5.0)
+
+def removedup(x):
+    unique = [] #initilizing an empty array to be used to add all the unique elements of the list
+    for i in x:
+        if i not in unique:
+            unique.append(i)
+    return unique
+            
 if __name__ == "__main__":
     print('testing mulitplication')
-    print(times(2,4))
+    print(multiply(2,4))
     print('testing addition')
     print(add(10,5))
     print('testing subtraction')
@@ -80,5 +106,6 @@ if __name__ == "__main__":
     print(Sin(math.pi))
     # Test of the Tangent Function
     print('Test of the Tangent Function')
-    print(math.pi)
-    
+    print(Tan(math.pi))
+    print('Testing the removing duplicates function')
+    print(removedup([2,2,2,4,4,5,5,6]))
