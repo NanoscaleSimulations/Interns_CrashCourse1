@@ -57,7 +57,7 @@ def average(x):
         sm += x[i]
     return sm/len(x)
 
-print(average([2,4,6,8]))
+
 
 def median(x):
     x = sorted(x)
@@ -69,7 +69,7 @@ def median(x):
     else:
         med = x[len(x)/2.0]
     return med
-print(median([6,8,2,4])==5.0)
+
 
 def removedup(x):
     unique = [] #initilizing an empty array to be used to add all the unique elements of the list
@@ -77,7 +77,51 @@ def removedup(x):
         if i not in unique:
             unique.append(i)
     return unique
+
+def Standard_Deviation(X): #Calculate the Standard Deviation
+    #Find the Mean
+    Sum = 0
+    for number1 in X:
+        Sum += number1
+    mean = Sum / len(X)
+    
+    #Find the Sum of the numerator
+    Sum2 = 0
+    for number2 in X:
+        Sum2 += (number2 - mean)**2
+        
+    #Calculate the St. Dev.
+    sd = (math.sqrt((1.0/(float(len(X))-1.0))*Sum2))
+    return(sd)
+
+
+def Largest_Value(X): #Return the Largest value in the list
+    return (max(X))
+
+
+def Smallest_Value(X): #Return the Smallest value in the list
+    return (min(X))
+
+def Lar_Val(X): #Return the Largest value in the list using a Loop
+    var = 0
+    for i in X:
+        if i > var:
+            var = i
             
+    return (var)
+
+def Small_Val(X):#Return the Smallest value in the list using a Loop
+    var = 0
+    for i in X:
+        if i < var:
+            var = i
+            
+    return (var)
+
+
+
+
+
 if __name__ == "__main__":
     print('testing mulitplication')
     print(multiply(2,4))
@@ -107,5 +151,21 @@ if __name__ == "__main__":
     # Test of the Tangent Function
     print('Test of the Tangent Function')
     print(Tan(math.pi))
+    #Test St. Dev.
+    print('Test of the Standard Deviation')
+    print(Standard_Deviation([1,2,3,4,5]))
+    print('Test for Largest Value')
+    print(Largest_Value([1,2,3]))
+    print('Test for Smallest Value')
+    print(Smallest_Value([1,2,3]))
+    print('Largest Value with loop')
+    print(Lar_Val([1,2,3,7,3]))
+    print('Smallest value with Loop')
+    print(Small_Val([1,4,-3,9]))
     print('Testing the removing duplicates function')
     print(removedup([2,2,2,4,4,5,5,6]))
+    print('Testing the mean')
+    print(average([2,4,6,8]))
+    print('Testing the median function')
+    print(median([3,4,6,1,6,7,8,3]))
+    
